@@ -1,0 +1,9 @@
+# Ignore all node_modules folders anywhere inside backend
+node_modules/
+
+# Optional but recommended
+.env
+dist/
+build/
+parcel-cache/
+.DS_Store
