@@ -1,0 +1,21 @@
+{
+  "name": "search-my-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^1.48.0",
+    "@langchain/community": "^1.1.27",
+    "@langchain/core": "^1.1.39",
+    "dotenv": "^17.4.1",
+    "ignore": "^7.0.5"
+  }
+}

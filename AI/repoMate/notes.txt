@@ -1,0 +1,186 @@
+zayeemmohd@Zayeems-MacBook-Pro repoMate % node lib/vector-store.js
+◇ injecting env (9) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injecting env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+
+getting summary for server.js
+summaries generated:  This `server.js` file sets up and launches an Express.js API server. It loads environment variables, enables JSON body parsing, and integrates dedicated routing modules for authentication (`/api/auth`) and task management (`/api/tasks`). A `/health` endpoint provides server status. The server starts listening on a configurable port (default 3000), logging its readiness, and exports the Express application instance.
+{
+  summary: 'This `server.js` file sets up and launches an Express.js API server. It loads environment variables, enables JSON body parsing, and integrates dedicated routing modules for authentication (`/api/auth`) and task management (`/api/tasks`). A `/health` endpoint provides server status. The server starts listening on a configurable port (default 3000), logging its readiness, and exports the Express application instance.',
+  embeddings: [
+      0.0064189783,    0.002409341,    0.021735273,   -0.052090723,
+      0.0044839247,  -0.0024792235,   0.0049015014,   -0.007064415,
+       0.017503966, -0.00062333595,   -0.041531198,   0.0092767095,
+       0.014984441,    0.015945714,     0.14908123,  -0.0035338935,
+       0.021952154,    0.012494344,    0.038058933,   -0.020783609,
+     -0.0018024611,  -0.0095436275,    0.017409442,   -0.010747134,
+      -0.022438837,    0.003454449,    0.018704973,   -0.023955844,
+        0.04982242,   -0.022787584,  -0.0024387727,   -0.026737278,
+      -0.016941411,    0.018268771, 0.000082838684,    0.013317304,
+       0.050883565,   -0.022807559,  -0.0037885848,   0.0077843755,
+       0.008059864,   -0.010775183,    0.009141035,    0.004101003,
+      -0.018142989,    0.021090647,    -0.02019418,   -0.005105646,
+       -0.01724981,     0.03376674,   -0.023815624,  -0.0071480665,
+       0.006556787,    -0.16684255,    -0.02868633,   -0.010039479,
+       0.003227079,   0.0072759725,    0.020210931,  -0.0077089546,
+      -0.035482343,     0.01083611,  -0.0013773066,   -0.004356034,
+      -0.011486865,   -0.001517156,    0.015353693,  -0.0023797788,
+       0.003911372,  -0.0118747195,   -0.009439259,  -0.0059322077,
+       -0.01444454,   -0.029644696,   -0.003740613,  -0.0031198927,
+       0.011469944,   -0.005994453,  0.00094733876, 0.000048666487,
+    -0.00089927204,    -0.02776406,   -0.023111444,   -0.024698457,
+      -0.017663043,   -0.014245594,   -0.033633735,   0.0046089906,
+       0.008296781,     0.04771917,    0.029937502,    0.010044332,
+       0.009795691,   -0.007305049,    -0.03064451,    0.011736188,
+      -0.004053554,   -0.006376781,    0.019018747,     0.01027787,
+    ... 2972 more items
+  ],
+  sourceCode: "const express = require('express');\n" +
+    "const dotenv = require('dotenv');\n" +
+    "const authRoutes = require('./auth');\n" +
+    "const taskRoutes = require('./tasks');\n" +
+    '\n' +
+    'const app = express();\n' +
+    'const PORT = process.env.PORT || 3000;\n' +
+    'app.use(express.json());\n' +
+    "app.use('/api/auth', authRoutes);\n" +
+    "app.use('/api/tasks', taskRoutes);\n" +
+    "app.get('/health', (req, res) => {\n" +
+    "  res.json({ status: 'healthy', timestamp: new Date().toISOString() });\n" +
+    '});\n' +
+    'app.listen(PORT, () => {\n' +
+    '  console.log(`🚀 TaskFlow API running on port ${PORT}`);\n' +
+    '});\n' +
+    '\n' +
+    'module.exports = app;\n',
+  fileName: 'server.js'
+}
+
+
+getting summary for README.md
+summaries generated:  This `README.md` file contains a single Markdown heading, `# small-test`. Its purpose is to immediately provide a clear, concise title or name for the project. While minimal, this heading acts as the project's initial identifier, helping anyone viewing the file understand the repository's subject at a glance and setting the stage for further documentation.
+Indexed:  README.md
+
+
+getting summary for authentication
+summaries generated:  This file serves as the central hub for our application's authentication logic. The line `const auth = auth();` initializes or obtains an authentication service instance. This `auth` object is then used throughout the project to manage user logins, registrations, session validation, and to secure specific features or data based on user identity and permissions.
+Indexed:  authentication
+getting summary for frontend.js
+summaries generated:  This `frontend.js` file's purpose, as shown by `const pdfviewer = pdf();`, is to initialize and set up PDF viewing functionality for the user interface. It instantiates a PDF viewer component, making it ready to load, display, and interact with PDF documents directly within the web application. Essentially, this file ensures the frontend has the necessary tools to handle and present PDFs to the user.
+Indexed:  frontend.js
+Indexing complete. Vector store: [
+  {
+    summary: "This `README.md` file contains a single Markdown heading, `# small-test`. Its purpose is to immediately provide a clear, concise title or name for the project. While minimal, this heading acts as the project's initial identifier, helping anyone viewing the file understand the repository's subject at a glance and setting the stage for further documentation.",
+    embeddings: [
+         0.008650715,   0.000924961,   0.022537244,   -0.08214299,
+        -0.020822855,  0.0059523014,  -0.019767703,  -0.015686449,
+        -0.009803389,  -0.014798951,   -0.02718701, -0.0035551398,
+        -0.008259967,   0.032238554,    0.12335274,   0.031109693,
+      -0.00050770363, 0.00048099915,   0.007024412,  -0.027957283,
+        0.0012822795,  -0.014619119,  -0.002452194,  -0.019589067,
+        -0.022118092,  -0.009850029,   0.016306123,  0.0023500435,
+          0.03437448,   0.011157459,  -0.032317165,  -0.008969653,
+         0.004832196,   0.019130724, 0.00094420713,   0.025209386,
+         0.014492173,   0.022973867, -0.0037672992,    0.00853942,
+        -0.014336697,  -0.010989893,  -0.029190734, -0.0048272526,
+         0.022204679,    0.01549528,  -0.008497658,   -0.02870064,
+        0.0056803105,   0.022547513,  -0.030039769, -0.0045033763,
+        -0.024908269,   -0.15122986,  0.0074461256,   0.008501579,
+         -0.01080107,  0.0033979295,  -0.009947748,  -0.015352681,
+        0.0016268123,  0.0006279079,   -0.02398762, -0.0056534833,
+       -0.0008788653,  -0.008235025, -0.0062892763,    0.01945164,
+        0.0036510206,  -0.021863056,   -0.00627446,  -0.011112274,
+       -0.0056577143,  -0.011195705, -0.0021401946,  -0.016951496,
+        0.0058051455, -0.0014421954,   0.020231595,   0.021084731,
+         0.002812271,  -0.008636854,   0.007179884,   0.000952454,
+       -0.0032754762,   0.011651346,  -0.017165603,  0.0055302735,
+        -0.021534374,  -0.013412733,   0.014897042,   0.029086536,
+         0.019425182,   0.003078379,  -0.006653113,   0.008850138,
+         0.009603472,  0.0077640535,  -0.022946753,  -0.015178634,
+      ... 2972 more items
+    ],
+    sourceCode: '# small-test',
+    fileName: 'README.md'
+  },
+  {
+    summary: "This file serves as the central hub for our application's authentication logic. The line `const auth = auth();` initializes or obtains an authentication service instance. This `auth` object is then used throughout the project to manage user logins, registrations, session validation, and to secure specific features or data based on user identity and permissions.",
+    embeddings: [
+        -0.00796102, -0.0050369333,    0.016164787,    -0.06592251,
+       -0.032207936,  -0.007197649,    0.006713588,  -0.0058026724,
+         0.00862106,  -0.008995037,   -0.016847705,  -0.0038050169,
+      0.00067757996,   0.025618212,     0.13034299,  -0.0033240889,
+      -0.0054723327, -0.0019183494,    0.008557547,   -0.029637061,
+      -0.0013754161, -0.0012170939,    0.025600173,  -0.0015477417,
+       -0.016313763,   0.012742929,    0.010408692,   -0.013606493,
+        0.036062527,   0.007292052,    0.003141936,   -0.008606541,
+       -0.011567566,   0.025373517, -0.00003440892,    0.021013107,
+         0.03423213,  -0.024778392,   0.0014435089,    0.007979987,
+       0.0079112025,   0.021062903,    0.010930697,  -0.0059396727,
+        0.017724527,   0.018662417,   0.0025826155,   -0.008225925,
+       -0.012606907,   0.009574073,   -0.028488135, -0.00005685173,
+       -0.037203778,   -0.14843802,   -0.004085785,     0.01713542,
+        0.014509536,   0.020641144,    0.017710881,    0.034480356,
+        -0.03501189,   0.026497621,   -0.004108274, -0.00017494377,
+       -0.005971016, -0.0025251713,    0.018609304,  -0.0052013653,
+       -0.009769852,  -0.021654733,  -0.0012872163,    0.009797161,
+        -0.03186916,   -0.02773343,    0.016826363,   -0.020973017,
+        0.011681026,   -0.03434462,   0.0055598835,    0.004992502,
+       0.0057492284,  0.0011583524,   -0.040050842,   -0.014654999,
+        0.010058262,  -0.031143263,   -0.021529855,   -0.017341211,
+      -0.0063371994,   0.034199364,    0.009891324, -0.00010083914,
+        0.012833956,  -0.010458523,  -0.0028189218,    -0.01150411,
+        0.005036244,   -0.00171425,    0.012771779,   0.0048995772,
+      ... 2972 more items
+    ],
+    sourceCode: '//we do authentication here\n\nconst auth = auth();\n',
+    fileName: 'authentication'
+  },
+  {
+    summary: "This `frontend.js` file's purpose, as shown by `const pdfviewer = pdf();`, is to initialize and set up PDF viewing functionality for the user interface. It instantiates a PDF viewer component, making it ready to load, display, and interact with PDF documents directly within the web application. Essentially, this file ensures the frontend has the necessary tools to handle and present PDFs to the user.",
+    embeddings: [
+        0.019886883, 0.00083726464,   0.033147443,  -0.054063875,   -0.02043831,
+       -0.005469623, 0.00052681804,   -0.01127619,   0.018249042, -0.0015097259,
+       0.0037977109,   -0.01193142,  -0.009632351,   0.006326311,     0.1329769,
+       -0.008118408,  0.0016029149,  0.0072559346,   0.032370817,  -0.023187928,
+       -0.030949987,   0.009680405,  0.0042439806,   0.012623615,  -0.010615892,
+       -0.014398769,   0.026487967, -0.0022897942,   0.048535544,    0.01641401,
+       0.0047577447,  0.0078949975,   0.015165988,   0.009340715,   0.013468055,
+         0.01791231,   0.042319726,   -0.03766444,  -0.004069197,   0.014556827,
+       -0.013837339, -0.0029274605,  -0.008791255,  0.0095794415, -0.0023121864,
+       0.0100628985,   0.007085373,  -0.017742652,  -0.026759408,   0.035577577,
+      -0.0042749927,  -0.011145247,  -0.018831864,   -0.15342562,  -0.012630835,
+         0.02170593, -0.0025435605,    0.02992252,   0.004169168, -0.0011316544,
+       -0.021270685,  0.0146689825, -0.0052447417, -0.0057289745,  -0.022117818,
+       -0.021163868,  -0.010050526, -0.0015185416,   0.008994897,    -0.0157187,
+       0.0051835948,  -0.013701554,  -0.034848794,  -0.018582083, -0.0011086921,
+        -0.02765258,    0.02154314,  -0.007843217, -0.0022159696,   0.021855762,
+       -0.024110684,   0.029140139,   -0.03643007,  -0.014487159,   0.030685546,
+      -0.0042945105,  -0.028558666,  0.0056964573,  -0.009898842, -0.0014055705,
+        0.024751764,   0.031710204,   0.008328332,  -0.014841321,   -0.02577132,
+       -0.024863398,   0.014896193,   0.002531402,  -0.007924481,  -0.010279729,
+      ... 2972 more items
+    ],
+    sourceCode: 'const pdfviewer = pdf();\n',
+    fileName: 'frontend.js'
+  }
+]
+Search results: [
+  {
+    fileName: 'authentication',
+    summary: "This file serves as the central hub for our application's authentication logic. The line `const auth = auth();` initializes or obtains an authentication service instance. This `auth` object is then used throughout the project to manage user logins, registrations, session validation, and to secure specific features or data based on user identity and permissions.",
+    sourceCode: '//we do authentication here\n\nconst auth = auth();\n',
+    similarity: 0.6992640969568324
+  },
+  {
+    fileName: 'frontend.js',
+    summary: "This `frontend.js` file's purpose, as shown by `const pdfviewer = pdf();`, is to initialize and set up PDF viewing functionality for the user interface. It instantiates a PDF viewer component, making it ready to load, display, and interact with PDF documents directly within the web application. Essentially, this file ensures the frontend has the necessary tools to handle and present PDFs to the user.",
+    sourceCode: 'const pdfviewer = pdf();\n',
+    similarity: 0.5689901955018223
+  },
+  {
+    fileName: 'README.md',
+    summary: "This `README.md` file contains a single Markdown heading, `# small-test`. Its purpose is to immediately provide a clear, concise title or name for the project. While minimal, this heading acts as the project's initial identifier, helping anyone viewing the file understand the repository's subject at a glance and setting the stage for further documentation.",
+    sourceCode: '# small-test',
+    similarity: 0.513207194023523
+  }
+]
